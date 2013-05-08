@@ -1,20 +1,17 @@
 Blog RESTful Web Service Sample
 ========================
 
-Introduction
-________________________
+##Introduction
 
 This is a sample application written in Java and Spring Framework which demonstrates how to create a RESTful Web Service.
 
 This sample RESTful web service contains simple Blog resources like Author, Post, and Categories. I will be posting a tutorial on how to create RESTful Web Services on my blog [No-nonsense](http://benjsicam.me).
 
-Deployment
-________________________
+##Deployment
 
 This application is already deployed on [Cloud Foundry](http://www.cloudfoundry.com). You can play with it by going to [https://restful-blog.cloudfoundry.com/](https://restful-blog.cloudfoundry.com/).
 
-How to use the deployed application
-________________________
+##How to use the deployed application
 
 This sample RESTful web service is secured by Spring Security. If asked for credentials, just enter admin for User and admin for Password. I will also post a tutorial on my blog on securing RESTful Web Services.
 
