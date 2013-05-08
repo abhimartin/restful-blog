@@ -184,4 +184,5 @@
     	<system>GitHub</system>
     	<url>https://github.com/benjsicam/restful-blog/issues</url>
     </issueManagement>
+    <description>This is a sample application written in Java and Spring Framework which demonstrates how to create a RESTful Web Service.</description>
 </project>
