@@ -1,20 +1,20 @@
 Blog RESTful Web Service Sample
 ========================
 
-## Introduction
-***
+Introduction
+________________________
 
 This is a sample application written in Java and Spring Framework which demonstrates how to create a RESTful Web Service.
 
 This sample RESTful web service contains simple Blog resources like Author, Post, and Categories. I will be posting a tutorial on how to create RESTful Web Services on my blog [No-nonsense](http://benjsicam.me).
 
-## Deployment
-***
+Deployment
+________________________
 
 This application is already deployed on [Cloud Foundry](http://www.cloudfoundry.com). You can play with it by going to [https://restful-blog.cloudfoundry.com/](https://restful-blog.cloudfoundry.com/).
 
-## How to use the deployed application
-***
+How to use the deployed application
+________________________
 
 This sample RESTful web service is secured by Spring Security. If asked for credentials, just enter admin for User and admin for Password. I will also post a tutorial on my blog on securing RESTful Web Services.
 
@@ -48,11 +48,11 @@ This sample RESTful web service is secured by Spring Security. If asked for cred
 
 ```javascript
 {
-   "username": "user",
-   "password": "user",
-   "email": "info@benjsicam.me",
-   "firstName": "Benj",
-   "lastName": "Sicam"
+	"username": "user",
+	"password": "user",
+	"email": "info@benjsicam.me",
+	"firstName": "Benj",
+	"lastName": "Sicam"
 }
 ```
 
@@ -72,11 +72,11 @@ This sample RESTful web service is secured by Spring Security. If asked for cred
 
 ```javascript
 {
-   "id": "1",
-   "username": "user",
-   "email": "info@benjsicam.me",
-   "firstName": "Juan",
-   "lastName": "dela Cruz"
+	"id": "1",
+	"username": "user",
+	"email": "info@benjsicam.me",
+	"firstName": "Juan",
+	"lastName": "dela Cruz"
 }
 ```
 
@@ -111,7 +111,7 @@ This sample RESTful web service is secured by Spring Security. If asked for cred
 
 ```javascript
 {
-   "name": "My Category"
+	"name": "My Category"
 }
 ```
 
@@ -128,8 +128,8 @@ This sample RESTful web service is secured by Spring Security. If asked for cred
 
 ```javascript
 {
-   "id": "1",
-   "name": "My Category"
+	"id": "1",
+	"name": "My Category"
 }
 ```
 
@@ -167,19 +167,19 @@ This sample RESTful web service is secured by Spring Security. If asked for cred
 
 ```javascript
 {
-   "author": {
-      "id": "1"
-   },
-   "date": "2013-05-07",
-   "categories": [
-      {
-         "id": "1"
-      },
-      {
-         "id": "3"
-      }
-   ],
-   "content": "My content"
+	"author": {
+		"id": "1"
+	},
+	"date": "2013-05-07",
+	"categories": [
+		{
+			"id": "1"
+		},
+		{
+			"id": "3"
+		}
+	],
+	"content": "My content"
 }
 ````
 
@@ -199,20 +199,20 @@ This sample RESTful web service is secured by Spring Security. If asked for cred
 
 ```javascript
 {
-   "id": "1",
-   "author": {
-      "id": "1"
-   },
-   "date": "2013-05-07",
-   "categories": [
-      {
-         "id": "1"
-      },
-      {
-         "id": "3"
-      }
-   ],
-   "content": "My updated content"
+	"id": "1",
+	"author": {
+		"id": "1"
+	},
+	"date": "2013-05-07",
+	"categories": [
+		{
+			"id": "1"
+		},
+		{
+			"id": "3"
+		}
+	],
+	"content": "My updated content"
 }
 ````
 
