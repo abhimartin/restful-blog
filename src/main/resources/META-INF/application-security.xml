@@ -7,7 +7,7 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 		
     <security:http auto-config="true" use-expressions="true" create-session="stateless">
-		<security:intercept-url pattern="/api/**" access="hasAnyRole('Administrator','User')"/>
+		<security:intercept-url pattern="/resources/**" access="hasAnyRole('Administrator','User')"/>
     	<security:http-basic />
     </security:http>
 
