@@ -3,7 +3,7 @@ Blog RESTful Web Service Sample
 
 ##Introduction
 
-This is a sample application written in Java and Spring Framework which demonstrates how to create a RESTful Web Service.
+This is a very basic sample application written in Java and Spring Framework which demonstrates how to create a RESTful Web Service.
 
 This sample RESTful web service contains simple Blog resources like Author, Post, and Categories. I will be posting a tutorial on how to create RESTful Web Services on my blog [No-nonsense](http://benjsicam.me).
 
