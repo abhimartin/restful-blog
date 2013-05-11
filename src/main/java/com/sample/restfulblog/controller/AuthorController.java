@@ -21,7 +21,7 @@ import com.sample.restfulblog.domain.Post;
 import com.sample.restfulblog.service.AuthorService;
 
 @Controller
-@RequestMapping("/api/author")
+@RequestMapping("/resources/author")
 public class AuthorController {
 	
 	@Autowired
@@ -70,7 +70,7 @@ public class AuthorController {
 		return authorService.findById(id);
 	}
 	
-	@RequestMapping(value = "/{id}/post", method = RequestMethod.GET)
+	@RequestMapping(value = "/{id}/posts", method = RequestMethod.GET)
 	public @ResponseBody List<Post> findAuthorPosts(@PathVariable("id") Long id ) {
 		
 		Assert.notNull(id, "Missing ID parameter.");
