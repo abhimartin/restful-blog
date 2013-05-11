@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sample.restfulblog.dao.PostRepository;
+import com.sample.restfulblog.domain.Author;
 import com.sample.restfulblog.domain.Post;
 
 @Service
@@ -36,6 +37,10 @@ public class PostService {
 	
 	public Post findById(Long id ) {
 		return postRepository.findOne(id);
+	}
+	
+	public Author findPostAuthor(Long id) {
+		return postRepository.findPostAuthor(id);
 	}
 	
 	public List<Post> findPostsByCategoryId(Long id) {
