@@ -19,7 +19,7 @@ import com.sample.restfulblog.service.CategoryService;
 import com.sample.restfulblog.service.PostService;
 
 @Controller
-@RequestMapping("/api/category")
+@RequestMapping("/resources/category")
 public class CategoryController {
 	
 	@Autowired
@@ -68,7 +68,7 @@ public class CategoryController {
 		return categoryService.findById(id);
 	}
 	
-	@RequestMapping(value = "/{id}/post", method = RequestMethod.GET)
+	@RequestMapping(value = "/{id}/posts", method = RequestMethod.GET)
 	public @ResponseBody List<Post> findCategoryPosts(@PathVariable("id") Long id ) {
 		
 		Assert.notNull(id, "Missing ID parameter.");
