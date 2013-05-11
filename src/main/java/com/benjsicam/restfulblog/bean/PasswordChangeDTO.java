@@ -1,4 +1,4 @@
-package com.sample.restfulblog.bean;
+package com.benjsicam.restfulblog.bean;
 
 public class PasswordChangeDTO {
 	private String currentPassword;

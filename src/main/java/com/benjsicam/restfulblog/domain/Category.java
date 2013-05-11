@@ -1,4 +1,4 @@
-package com.sample.restfulblog.domain;
+package com.benjsicam.restfulblog.domain;
 
 import java.util.Set;
 

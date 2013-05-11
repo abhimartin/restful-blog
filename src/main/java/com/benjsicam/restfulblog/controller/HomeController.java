@@ -1,4 +1,4 @@
-package com.sample.restfulblog.controller;
+package com.benjsicam.restfulblog.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

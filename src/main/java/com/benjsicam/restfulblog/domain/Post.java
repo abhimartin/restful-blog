@@ -1,4 +1,4 @@
-package com.sample.restfulblog.domain;
+package com.benjsicam.restfulblog.domain;
 
 import java.util.Date;
 import java.util.Set;
@@ -21,7 +21,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 
-import com.sample.restfulblog.domain.Author;
+import com.benjsicam.restfulblog.domain.Author;
 
 @Entity
 @Table(name = "post")

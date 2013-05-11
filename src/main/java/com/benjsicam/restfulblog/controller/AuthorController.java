@@ -1,4 +1,4 @@
-package com.sample.restfulblog.controller;
+package com.benjsicam.restfulblog.controller;
 
 import java.util.List;
 
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.sample.restfulblog.bean.PasswordChangeDTO;
-import com.sample.restfulblog.domain.Author;
-import com.sample.restfulblog.domain.Post;
-import com.sample.restfulblog.service.AuthorService;
+import com.benjsicam.restfulblog.bean.PasswordChangeDTO;
+import com.benjsicam.restfulblog.domain.Author;
+import com.benjsicam.restfulblog.domain.Post;
+import com.benjsicam.restfulblog.service.AuthorService;
 
 @Controller
 @RequestMapping("/resources/author")

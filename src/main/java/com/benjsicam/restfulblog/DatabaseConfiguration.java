@@ -1,4 +1,4 @@
-package com.sample.restfulblog;
+package com.benjsicam.restfulblog;
 
 import java.util.Properties;
 
@@ -27,7 +27,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @PropertySource("classpath:META-INF/config/application.properties")
 @EnableTransactionManagement
-@EnableJpaRepositories("com.sample.restfulblog")
+@EnableJpaRepositories("com.benjsicam.restfulblog")
 public class DatabaseConfiguration {
 	private @Value("${database.driverClassName}") String driverClassName;
 	private @Value("${database.host}") String host;
@@ -76,7 +76,7 @@ public class DatabaseConfiguration {
 		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
 		
 		factory.setJpaProperties(jpaProperties);
-		factory.setPackagesToScan("com.sample.restfulblog");
+		factory.setPackagesToScan("com.benjsicam.restfulblog");
 		factory.setDataSource(dataSource);
 		factory.setPersistenceProviderClass(HibernatePersistence.class);
 		

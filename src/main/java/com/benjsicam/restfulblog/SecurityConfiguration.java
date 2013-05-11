@@ -1,4 +1,4 @@
-package com.sample.restfulblog;
+package com.benjsicam.restfulblog;
 
 import java.util.ArrayList;
 

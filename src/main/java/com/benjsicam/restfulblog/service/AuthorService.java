@@ -1,4 +1,4 @@
-package com.sample.restfulblog.service;
+package com.benjsicam.restfulblog.service;
 
 import java.util.List;
 
@@ -7,10 +7,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.sample.restfulblog.dao.AuthorRepository;
-import com.sample.restfulblog.dao.PostRepository;
-import com.sample.restfulblog.domain.Author;
-import com.sample.restfulblog.domain.Post;
+import com.benjsicam.restfulblog.dao.AuthorRepository;
+import com.benjsicam.restfulblog.dao.PostRepository;
+import com.benjsicam.restfulblog.domain.Author;
+import com.benjsicam.restfulblog.domain.Post;
 
 @Service
 public class AuthorService {

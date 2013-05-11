@@ -1,4 +1,4 @@
-package com.sample.restfulblog.service;
+package com.benjsicam.restfulblog.service;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,7 +12,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-import com.sample.restfulblog.domain.Author;
+import com.benjsicam.restfulblog.domain.Author;
 
 @SuppressWarnings("deprecation")
 @Component("userDetailsService")

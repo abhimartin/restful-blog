@@ -24,7 +24,7 @@
     </context-param>
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>com.sample.restfulblog.ApplicationConfiguration, classpath:META-INF/application-security.xml</param-value>
+        <param-value>com.benjsicam.restfulblog.ApplicationConfiguration, classpath:META-INF/application-security.xml</param-value>
     </context-param>
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -38,7 +38,7 @@
         </init-param>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>com.sample.restfulblog.ApplicationConfiguration</param-value>
+            <param-value>com.benjsicam.restfulblog.ApplicationConfiguration</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>

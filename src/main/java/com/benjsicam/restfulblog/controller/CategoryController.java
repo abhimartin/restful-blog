@@ -1,4 +1,4 @@
-package com.sample.restfulblog.controller;
+package com.benjsicam.restfulblog.controller;
 
 import java.util.List;
 
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.sample.restfulblog.domain.Category;
-import com.sample.restfulblog.domain.Post;
-import com.sample.restfulblog.service.CategoryService;
-import com.sample.restfulblog.service.PostService;
+import com.benjsicam.restfulblog.domain.Category;
+import com.benjsicam.restfulblog.domain.Post;
+import com.benjsicam.restfulblog.service.CategoryService;
+import com.benjsicam.restfulblog.service.PostService;
 
 @Controller
 @RequestMapping("/resources/category")
