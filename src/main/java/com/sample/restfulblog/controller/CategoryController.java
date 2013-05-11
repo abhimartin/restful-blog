@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,17 +38,12 @@ public class CategoryController {
 	@ResponseStatus(HttpStatus.OK)
 	public void update(@RequestBody Category entity) {
 		
-		Assert.notNull(entity.getId(), "Category ID is null.");
-		Assert.notNull(categoryService.findById(entity.getId()), "Category not found");
-		
 		categoryService.update(entity);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	@ResponseStatus(HttpStatus.OK)
 	public void delete(@PathVariable("id") Long id) {
-		
-		Assert.notNull(id, "Missing ID parameter.");
 		
 		categoryService.delete(id);
 	}
@@ -63,15 +57,11 @@ public class CategoryController {
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public @ResponseBody Category findCategory(@PathVariable("id") Long id ) {
 		
-		Assert.notNull(id, "Missing ID parameter.");
-		
 		return categoryService.findById(id);
 	}
 	
 	@RequestMapping(value = "/{id}/posts", method = RequestMethod.GET)
 	public @ResponseBody List<Post> findCategoryPosts(@PathVariable("id") Long id ) {
-		
-		Assert.notNull(id, "Missing ID parameter.");
 		
 		return postService.findPostsByCategoryId(id);
 	}

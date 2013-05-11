@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,17 +40,12 @@ public class AuthorController {
 	@ResponseStatus(HttpStatus.OK)
 	public void update(@RequestBody Author entity) {
 		
-		Assert.notNull(entity.getId(), "Author ID is null.");
-		Assert.notNull(authorService.findById(entity.getId()), "Author not found");
-		
 		authorService.update(entity);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	@ResponseStatus(HttpStatus.OK)
 	public void delete(@PathVariable("id") Long id) {
-		
-		Assert.notNull(id, "Missing ID parameter.");
 		
 		authorService.delete(id);
 	}
@@ -65,15 +59,11 @@ public class AuthorController {
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public @ResponseBody Author findAuthor(@PathVariable("id") Long id ) {
 		
-		Assert.notNull(id, "Missing ID parameter.");
-		
 		return authorService.findById(id);
 	}
 	
 	@RequestMapping(value = "/{id}/posts", method = RequestMethod.GET)
 	public @ResponseBody List<Post> findAuthorPosts(@PathVariable("id") Long id ) {
-		
-		Assert.notNull(id, "Missing ID parameter.");
 		
 		return authorService.findAuthorPosts(id);
 	}
@@ -84,10 +74,6 @@ public class AuthorController {
 		
 		String userName = SecurityContextHolder.getContext().getAuthentication().getName();
 		Author author = authorService.findByUsername(userName);
-		
-		Assert.notNull(author, "No user found.");
-		Assert.isTrue(passwordEncoder.matches(passwordChangeDTO.getNewPassword(), author.getPassword()), "Password is incorrect.");
-		Assert.isTrue(passwordChangeDTO.getNewPassword().equals(passwordChangeDTO.getConfirmPassword()), "Passwords do not match.");
 		
 		author.setPassword(passwordChangeDTO.getNewPassword());
 		

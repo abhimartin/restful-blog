@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,7 +38,6 @@ public class PostController {
 	@RequestMapping(method = RequestMethod.PUT)
 	@ResponseStatus(HttpStatus.OK)
 	public void update(@RequestBody Post post) {
-		Assert.notNull(post.getId(), "Post ID is null.");
 		
 		postService.update(post);
 	}
@@ -47,8 +45,6 @@ public class PostController {
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	@ResponseStatus( HttpStatus.OK )
 	public void delete(@PathVariable("id") Long id) {
-		
-		Assert.notNull(id, "Missing ID parameter.");
 		
 		postService.delete(id);
 	}
@@ -62,22 +58,17 @@ public class PostController {
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)	
 	public @ResponseBody Post findPost(@PathVariable("id") Long id ) {
 		
-		Assert.notNull(id, "Missing ID parameter.");
-		
 		return postService.findById(id);
 	}
 	
 	@RequestMapping(value = "/{id}/author", method = RequestMethod.GET)
 	public @ResponseBody Author getPostAuthor(@PathVariable("id") Long id) {
-		Assert.notNull(id, "Missing ID parameter.");
 		
 		return postService.findPostAuthor(id);
 	}
 	
 	@RequestMapping(value = "/{id}/category", method = RequestMethod.GET)	
 	public @ResponseBody List<Category> findPostCategories(@PathVariable("id") Long id ) {
-		
-		Assert.notNull(id, "Missing ID parameter.");
 		
 		return categoryService.findCategoriesByPostId(id);
 	}
