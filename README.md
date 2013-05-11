@@ -17,19 +17,19 @@ This sample RESTful web service is secured by Spring Security. If asked for cred
 
 ### Working with Authors
 
-####GET /api/author
+####GET /resources/author
 
 - will lists all authors
 
-####GET /api/author/{id} 
+####GET /resources/author/{id} 
 
 - will return the author with the specified ID
 
-####GET /api/author/{id}/post 
+####GET /resources/author/{id}/posts
 
 - will return a list of the posts made by the author with the specified ID
 
-####POST /api/author 
+####POST /resources/author 
 
 - will create an author in the database
 
@@ -53,7 +53,7 @@ This sample RESTful web service is secured by Spring Security. If asked for cred
 }
 ```
 
-####PUT /api/author 
+####PUT /resources/author 
 
 - will update the author in the database
 
@@ -77,26 +77,26 @@ This sample RESTful web service is secured by Spring Security. If asked for cred
 }
 ```
 
-####DELETE /api/author/{id} 
+####DELETE /resources/author/{id} 
 
 - will delete the author with the specified ID in the database
 
 
 ###Working with Categories
 
-####GET /api/category
+####GET /resources/category
 
 - will lists all authors
 
-####GET /api/category/{id}
+####GET /resources/category/{id}
 
 - will return the category with the specified ID
 
-####GET /api/category/{id}/post
+####GET /resources/category/{id}/posts
 
 - will return a list of the posts under the specified category ID
 
-####POST /api/category
+####POST /resources/category
 
 - will create a category in the database
 
@@ -112,7 +112,7 @@ This sample RESTful web service is secured by Spring Security. If asked for cred
 }
 ```
 
-####PUT /api/category
+####PUT /resources/category
 
 - will update the category in the database
 
@@ -130,26 +130,30 @@ This sample RESTful web service is secured by Spring Security. If asked for cred
 }
 ```
 
-####DELETE /api/category/{id}
+####DELETE /resources/category/{id}
 
 - deletes the category with the specified ID
 
 
 ###Working with Posts
 
-####GET /api/post
+####GET /resources/post
 
 - will list all posts
 
-####GET /api/post/{id}
+####GET /resources/post/{id}
 
 - will return the post with the specified ID
 
-####GET /api/post/{id}/category
+####GET /resources/post/{id}/author
+
+- will return the author of the post with the specified id
+
+####GET /resources/post/{id}/category
 
 - will return a list of categories in which the post with the specified id is under
 
-####POST /api/post
+####POST /resources/post
 
 - will create a new post in the database
 
@@ -180,7 +184,7 @@ This sample RESTful web service is secured by Spring Security. If asked for cred
 }
 ````
 
-####PUT /api/post
+####PUT /resources/post
 
 - will update a post on the database
 
@@ -213,6 +217,6 @@ This sample RESTful web service is secured by Spring Security. If asked for cred
 }
 ````
 
-####DELETE /api/post/{id}
+####DELETE /resources/post/{id}
 
 - deletes the post with the specified ID
