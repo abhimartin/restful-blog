@@ -13,13 +13,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import com.sample.restfulblog.domain.Author;
 import com.sample.restfulblog.domain.Category;
 import com.sample.restfulblog.domain.Post;
 import com.sample.restfulblog.service.CategoryService;
 import com.sample.restfulblog.service.PostService;
 
 @Controller
-@RequestMapping("/api/post")
+@RequestMapping("/resources/post")
 public class PostController {
 	
 	@Autowired
@@ -64,6 +65,13 @@ public class PostController {
 		Assert.notNull(id, "Missing ID parameter.");
 		
 		return postService.findById(id);
+	}
+	
+	@RequestMapping(value = "/{id}/author", method = RequestMethod.GET)
+	public @ResponseBody Author getPostAuthor(@PathVariable("id") Long id) {
+		Assert.notNull(id, "Missing ID parameter.");
+		
+		return postService.findPostAuthor(id);
 	}
 	
 	@RequestMapping(value = "/{id}/category", method = RequestMethod.GET)	
